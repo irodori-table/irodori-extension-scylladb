@@ -371,7 +371,7 @@
   },
   "source": {
     "marketplaceId": "irodori.scylladb",
-    "repository": "https://github.com/hjosugi/irodori-extension-scylladb",
+    "repository": "https://github.com/irodori-table/irodori-extension-scylladb",
     "knowledgeEngineStatus": "wired",
     "adapter": "db/cassandra.rs",
     "adapterSha256": "8609b051e3c1d9c890b613266d04bb25a7350fcab8a0b81c64bc530ebc269fa9",
