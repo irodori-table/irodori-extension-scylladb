@@ -252,15 +252,11 @@ impl CassandraConfig {
     }
 
     fn redact(&self, message: &str) -> String {
-        self.redaction_values.iter().fold(
-            message.replace(&self.node, "<cassandra-node>"),
-            |message, secret| {
-                if secret.is_empty() {
-                    message
-                } else {
-                    message.replace(secret, "****")
-                }
-            },
+        abi::redact_endpoint(
+            message,
+            &self.node,
+            "<cassandra-node>",
+            &self.redaction_values,
         )
     }
 }
